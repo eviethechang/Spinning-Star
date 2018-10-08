@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+
+              <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" overflow="hidden">
+          <defs id="defs">
+            <clipPath id="svg-clip">
+              <rect x="0" y="0" width="300" height="300" />
+            </clipPath>
+            
+            <filter id="shadow">
+              <feColorMatrix type="matrix" in="SourceAlpha" result="dark" values="0 0 0 0 0, 0 0 0 0 0, 0 0 0 0 0, 0 0 0 0.3 0"/>
+                <feGaussianBlur id="blur" in="dark" stdDeviation="6" result="shadow" />
+                <feBlend mode="normal" in="SourceGraphic" in2="shadow" />
+            </filter>
+            
+            <radialGradient id="rad-grad">
+              <stop id="rad-grad-1" offset="65%" stop-color="#000000" stop-opacity="0" />
+              <stop id="rad-grad-2" offset="100%" stop-color="#000000" stop-opacity="0.15" />
+            </radialGradient>
+            
+            <linearGradient id="background-lin-grad" x1="0" x2="0" y1="0" y2="1">
+              <stop offset="0%" stop-color="#2a332c" />
+              <stop offset="100%" stop-color="#191d14" />
+            </linearGradient>
+            
+          </defs>
+          
+          <g id="container" class="hitarea">
+            <rect x="0" y="0" width="300" height="300" fill="url(#background-lin-grad)" />
+          </g>
+        </svg>
+
+          <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"> </script>
+          <script type="text/javascript" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin.min.js"> </script>
+          <script type="text/javascript" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/DrawSVGPlugin.min.js"> </script>
+          <script type="text/javascript" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/SplitText.min.js"> </script>
+          <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"> </script>
+          <script src="function.js"></script>
+    </body>
+</html>
+
+
